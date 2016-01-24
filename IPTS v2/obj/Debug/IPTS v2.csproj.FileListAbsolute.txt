@@ -1,0 +1,9 @@
+C:\Users\joeol\Documents\Visual Studio 2015\Projects\IPTS v2\IPTS v2\bin\Debug\IPTS v2.exe.config
+C:\Users\joeol\Documents\Visual Studio 2015\Projects\IPTS v2\IPTS v2\bin\Debug\IPTS v2.exe
+C:\Users\joeol\Documents\Visual Studio 2015\Projects\IPTS v2\IPTS v2\bin\Debug\IPTS v2.pdb
+C:\Users\joeol\Documents\Visual Studio 2015\Projects\IPTS v2\IPTS v2\obj\Debug\IPTS v2.csprojResolveAssemblyReference.cache
+C:\Users\joeol\Documents\Visual Studio 2015\Projects\IPTS v2\IPTS v2\obj\Debug\InstaTransfer.Form1.resources
+C:\Users\joeol\Documents\Visual Studio 2015\Projects\IPTS v2\IPTS v2\obj\Debug\WindowsFormsApplication1.Properties.Resources.resources
+C:\Users\joeol\Documents\Visual Studio 2015\Projects\IPTS v2\IPTS v2\obj\Debug\IPTS v2.csproj.GenerateResource.Cache
+C:\Users\joeol\Documents\Visual Studio 2015\Projects\IPTS v2\IPTS v2\obj\Debug\IPTS v2.exe
+C:\Users\joeol\Documents\Visual Studio 2015\Projects\IPTS v2\IPTS v2\obj\Debug\IPTS v2.pdb
