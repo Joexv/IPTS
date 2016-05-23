@@ -16,3 +16,12 @@ F:\IPTS v2\IPTS v2\obj\Release\IPTS v2.csprojResolveAssemblyReference.cache
 F:\IPTS v2\IPTS v2\obj\Release\InstaTransfer.Form1.resources
 F:\IPTS v2\IPTS v2\obj\Release\InstantPokemonTransferSystem.Properties.Resources.resources
 F:\IPTS v2\IPTS v2\obj\Release\IPTS v2.csproj.GenerateResource.Cache
+C:\Users\Joexv\Desktop\New folder (2)\IPTS-master\IPTS v2\bin\Release\IPTS.exe.config
+C:\Users\Joexv\Desktop\New folder (2)\IPTS-master\IPTS v2\obj\Release\IPTS.exe
+C:\Users\Joexv\Desktop\New folder (2)\IPTS-master\IPTS v2\obj\Release\IPTS.pdb
+C:\Users\Joexv\Desktop\New folder (2)\IPTS-master\IPTS v2\bin\Release\IPTS.exe
+C:\Users\Joexv\Desktop\New folder (2)\IPTS-master\IPTS v2\bin\Release\IPTS.pdb
+C:\Users\Joexv\Desktop\New folder (2)\IPTS-master\IPTS v2\obj\Release\IPTS v2.csprojResolveAssemblyReference.cache
+C:\Users\Joexv\Desktop\New folder (2)\IPTS-master\IPTS v2\obj\Release\InstaTransfer.Form1.resources
+C:\Users\Joexv\Desktop\New folder (2)\IPTS-master\IPTS v2\obj\Release\InstantPokemonTransferSystem.Properties.Resources.resources
+C:\Users\Joexv\Desktop\New folder (2)\IPTS-master\IPTS v2\obj\Release\IPTS v2.csproj.GenerateResource.Cache

@@ -522,12 +522,13 @@ namespace InstaTransfer
             comboBox1.Items.Clear();
             for (uint i = 0; i <= numberOfPokemon; i++)
             {
-                if (i <= 0x1FE)
+                if (i <= numberOfPokemon)
                     comboBox1.Items.Add(ROMCharactersToString(10, (uint)(0xB * i + pokemonNamesLocation)));
             }
             //Next pokemon
             comboBox1.SelectedIndex = (test + 1);
             comboBox2.SelectedIndex = (comboBox2.SelectedIndex + 1);
+            
         }
 
 
