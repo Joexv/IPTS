@@ -60,6 +60,11 @@ namespace InstaTransfer
                         if (i <= numberOfPokemon)
                             comboBox1.Items.Add(ROMCharactersToString(10, (uint)(0xB * i + pokemonNamesLocation)));
                     }
+                    for (uint i = 0; i <= numberOfItems; i++)
+                    {
+                        if (i <= numberOfItems)
+                            ItemBox.Items.Add(ROMCharactersToString(11, (uint)(44 * i + itemTable)));
+                    }
                     StatOffset.Text = "0x" + PokemonStats.ToString("x4");
                     NameOffset.Text = "0x" + pokemonNamesLocation.ToString("x4");
                     ofd.Filter = "InstaTransfer TRF (*.TRF)|*.TRF"; //Opens TRF file
@@ -207,7 +212,162 @@ namespace InstaTransfer
             br.BaseStream.Seek(Offset + 25, SeekOrigin.Begin);
             string Cint = Convert.ToString(br.ReadByte());
             IColor.Text = "Color: " + GetColor(Cint);
-            //Item Reading is broken and removed, will fix in the future
+            //EV
+            br.BaseStream.Seek(Offset + 10, SeekOrigin.Begin);
+            string Ibyte1 = Convert.ToString(br.ReadByte());
+
+            br.BaseStream.Seek(Offset + 11, SeekOrigin.Begin);
+            string Ibyte2 = Convert.ToString(br.ReadByte());
+
+            byte[] bytes = new[] { (byte)Convert.ToInt32(Ibyte1), (byte)Convert.ToInt32(Ibyte2) };
+
+            System.Collections.BitArray array = new System.Collections.BitArray(bytes);
+            {
+                for (int i = 0, j = 1; i < 11; i = (i + 2), j = (j + 2))
+                {
+                    if (array[i] == false)
+                    {
+                        if (array[j] == false)
+                        {
+                            if (i == 0)
+                            {
+                                IHPEV.Text = "HP 0";
+                            }
+                            else if (i == 2)
+                            {
+                                IAttackEV.Text = "ATK 0";
+                            }
+                            else if (i == 4)
+                            {
+                                IDefenseEV.Text = "DEF 0";
+                            }
+                            else if (i == 6)
+                            {
+                                ISpeedEV.Text = "SPD 0";
+                            }
+                            else if (i == 8)
+                            {
+                                ISpAttackEV.Text = "S.ATK 0";
+                            }
+                            else if (i == 10)
+                            {
+                                ISpDefenseEV.Text = "S.DEF 0";
+                            }
+                        }
+
+                        else
+                        {
+                            if (i == 0)
+                            {
+                                IHPEV.Text = "HP 2";
+                            }
+                            else if (i == 2)
+                            {
+                                IAttackEV.Text = "ATK 2";
+                            }
+                            else if (i == 4)
+                            {
+                                IDefenseEV.Text = "DEF 2";
+                            }
+                            else if (i == 6)
+                            {
+                                ISpeedEV.Text = "SPD 2";
+                            }
+                            else if (i == 8)
+                            {
+                                ISpAttackEV.Text = "S.ATK 2";
+                            }
+                            else if (i == 10)
+                            {
+                                ISpDefenseEV.Text = "S.DEF 2";
+                            }
+                        }
+                    }
+
+                    else
+                    {
+                        if (array[j] == false)
+                        {
+                            if (i == 0)
+                            {
+                                IHPEV.Text = "HP 1";
+                            }
+                            else if (i == 2)
+                            {
+                                IAttackEV.Text = "ATK 1";
+                            }
+                            else if (i == 4)
+                            {
+                                IDefenseEV.Text = "DEF 1";
+                            }
+                            else if (i == 6)
+                            {
+                                ISpeedEV.Text = "SPD 1";
+                            }
+                            else if (i == 8)
+                            {
+                                ISpAttackEV.Text = "S.ATK 1";
+                            }
+                            else if (i == 10)
+                            {
+                                ISpDefenseEV.Text = "S.DEF 1";
+                            }
+                        }
+
+                        else
+                        {
+                            if (i == 0)
+                            {
+                                IHPEV.Text = "HP 3";
+                            }
+                            else if (i == 2)
+                            {
+                                IAttackEV.Text = "ATK 3";
+                            }
+                            else if (i == 4)
+                            {
+                                IDefenseEV.Text = "DEF 3";
+                            }
+                            else if (i == 6)
+                            {
+                                ISpeedEV.Text = "SPD 3";
+                            }
+                            else if (i == 8)
+                            {
+                                ISpAttackEV.Text = "S.ATK 3";
+                            }
+                            else if (i == 10)
+                            {
+                                ISpDefenseEV.Text = "S.DEF 3";
+                            }
+                        }
+                    }
+                }
+            }
+            //Item Loading
+            #region Items
+            int add = 0, index = 0;
+            br.BaseStream.Seek(Offset + 12, SeekOrigin.Begin);
+            byte[] array1 = br.ReadBytes(2);
+            add = array1[1];
+            index = array1[0];
+            for (; add != 0; add--)
+            {
+                index = index + 256;
+            }
+            ItemBox.SelectedIndex = index;
+            ITem1.Text = ItemBox.Text;
+            br.BaseStream.Seek(Offset + 14, SeekOrigin.Begin);
+            byte[] array2 = br.ReadBytes(2);
+            add = array2[1];
+            index = array2[0];
+            for (; add != 0; add--)
+            {
+                index = index + 256;
+            }
+            ItemBox.SelectedIndex = index;
+            ITem2.Text = ItemBox.Text;
+            #endregion
             br.Close();
 
         }
@@ -328,6 +488,162 @@ namespace InstaTransfer
             br.BaseStream.Seek(Offset + 25, SeekOrigin.Begin);
             string Cint = Convert.ToString(br.ReadByte());
             Color.Text = "Color: " + GetColor(Cint);
+            //EV
+            br.BaseStream.Seek(Offset + 10, SeekOrigin.Begin);
+            string byte1 = Convert.ToString(br.ReadByte());
+
+            br.BaseStream.Seek(Offset + 11, SeekOrigin.Begin);
+            string byte2 = Convert.ToString(br.ReadByte());
+
+            byte[] bytes = new[] { (byte)Convert.ToInt32(byte1), (byte)Convert.ToInt32(byte2) };
+
+            System.Collections.BitArray array = new System.Collections.BitArray(bytes);
+            {
+                for (int i = 0, j = 1; i < 11; i = (i + 2), j = (j + 2))
+                {
+                    if (array[i] == false)
+                    {
+                        if (array[j] == false)
+                        {
+                            if (i == 0)
+                            {
+                                HPEV.Text = "HP 0";
+                            }
+                            else if (i == 2)
+                            {
+                                AttackEV.Text = "ATK 0";
+                            }
+                            else if (i == 4)
+                            {
+                                DefenseEV.Text = "DEF 0";
+                            }
+                            else if (i == 6)
+                            {
+                                SpeedEV.Text = "SPD 0";
+                            }
+                            else if (i == 8)
+                            {
+                                SpAttackEV.Text = "S.ATK 0";
+                            }
+                            else if (i == 10)
+                            {
+                                SpDefenseEV.Text = "S.DEF 0";
+                            }
+                        }
+
+                        else
+                        {
+                            if (i == 0)
+                            {
+                                HPEV.Text = "HP 2";
+                            }
+                            else if (i == 2)
+                            {
+                                AttackEV.Text = "ATK 2";
+                            }
+                            else if (i == 4)
+                            {
+                                DefenseEV.Text = "DEF 2";
+                            }
+                            else if (i == 6)
+                            {
+                                SpeedEV.Text = "SPD 2";
+                            }
+                            else if (i == 8)
+                            {
+                                SpAttackEV.Text = "S.ATK 2";
+                            }
+                            else if (i == 10)
+                            {
+                                SpDefenseEV.Text = "S.DEF 2";
+                            }
+                        }
+                    }
+
+                    else
+                    {
+                        if (array[j] == false)
+                        {
+                            if (i == 0)
+                            {
+                                HPEV.Text = "HP 1";
+                            }
+                            else if (i == 2)
+                            {
+                                AttackEV.Text = "ATK 1";
+                            }
+                            else if (i == 4)
+                            {
+                                DefenseEV.Text = "DEF 1";
+                            }
+                            else if (i == 6)
+                            {
+                                SpeedEV.Text = "SPD 1";
+                            }
+                            else if (i == 8)
+                            {
+                                SpAttackEV.Text = "S.ATK 1";
+                            }
+                            else if (i == 10)
+                            {
+                                SpDefenseEV.Text = "S.DEF 1";
+                            }
+                        }
+
+                        else
+                        {
+                            if (i == 0)
+                            {
+                                HPEV.Text = "HP 3";
+                            }
+                            else if (i == 2)
+                            {
+                                AttackEV.Text = "ATK 3";
+                            }
+                            else if (i == 4)
+                            {
+                                DefenseEV.Text = "DEF 3";
+                            }
+                            else if (i == 6)
+                            {
+                                SpeedEV.Text = "SPD 3";
+                            }
+                            else if (i == 8)
+                            {
+                                SpAttackEV.Text = "S.ATK 3";
+                            }
+                            else if (i == 10)
+                            {
+                                SpDefenseEV.Text = "S.DEF 3";
+                            }
+                        }
+                    }
+                }
+            }
+            //Item Loading
+            #region Items
+            int add = 0, index = 0;
+            br.BaseStream.Seek(Offset + 12, SeekOrigin.Begin);
+            byte[] array1 = br.ReadBytes(2);
+            add = array1[1];
+            index = array1[0];
+            for (; add != 0; add--)
+            {
+                index = index + 256;
+            }
+            ItemBox.SelectedIndex = index;
+            RItem1.Text = ItemBox.Text;
+            br.BaseStream.Seek(Offset + 14, SeekOrigin.Begin);
+            byte[] array2 = br.ReadBytes(2);
+            add = array2[1];
+            index = array2[0];
+            for (; add != 0; add--)
+            {
+                index = index + 256;
+            }
+            ItemBox.SelectedIndex = index;
+            RItem2.Text = ItemBox.Text;
+            #endregion
             br.Close();
         }
 

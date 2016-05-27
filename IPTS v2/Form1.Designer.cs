@@ -62,12 +62,12 @@
             this.Type1 = new System.Windows.Forms.Label();
             this.Type2 = new System.Windows.Forms.Label();
             this.groupBox15 = new System.Windows.Forms.GroupBox();
-            this.label54 = new System.Windows.Forms.Label();
-            this.label55 = new System.Windows.Forms.Label();
-            this.label56 = new System.Windows.Forms.Label();
-            this.label57 = new System.Windows.Forms.Label();
-            this.label58 = new System.Windows.Forms.Label();
-            this.label59 = new System.Windows.Forms.Label();
+            this.HPEV = new System.Windows.Forms.Label();
+            this.DefenseEV = new System.Windows.Forms.Label();
+            this.SpeedEV = new System.Windows.Forms.Label();
+            this.SpAttackEV = new System.Windows.Forms.Label();
+            this.SpDefenseEV = new System.Windows.Forms.Label();
+            this.AttackEV = new System.Windows.Forms.Label();
             this.groupBox16 = new System.Windows.Forms.GroupBox();
             this.Hp = new System.Windows.Forms.Label();
             this.Def = new System.Windows.Forms.Label();
@@ -109,12 +109,12 @@
             this.IType1 = new System.Windows.Forms.Label();
             this.IType2 = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.label17 = new System.Windows.Forms.Label();
-            this.label18 = new System.Windows.Forms.Label();
-            this.label27 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label26 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
+            this.IHPEV = new System.Windows.Forms.Label();
+            this.IDefenseEV = new System.Windows.Forms.Label();
+            this.ISpeedEV = new System.Windows.Forms.Label();
+            this.ISpAttackEV = new System.Windows.Forms.Label();
+            this.ISpDefenseEV = new System.Windows.Forms.Label();
+            this.IAttackEV = new System.Windows.Forms.Label();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.IHp = new System.Windows.Forms.Label();
             this.IDef = new System.Windows.Forms.Label();
@@ -129,6 +129,7 @@
             this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.ItemBox = new System.Windows.Forms.ComboBox();
             this.groupBox2.SuspendLayout();
             this.groupBox10.SuspendLayout();
             this.groupBox11.SuspendLayout();
@@ -347,9 +348,9 @@
             // groupBox11
             // 
             this.groupBox11.Controls.Add(this.Gender);
-            this.groupBox11.Location = new System.Drawing.Point(170, 172);
+            this.groupBox11.Location = new System.Drawing.Point(196, 172);
             this.groupBox11.Name = "groupBox11";
-            this.groupBox11.Size = new System.Drawing.Size(154, 41);
+            this.groupBox11.Size = new System.Drawing.Size(128, 41);
             this.groupBox11.TabIndex = 31;
             this.groupBox11.TabStop = false;
             this.groupBox11.Text = "Gender Rate";
@@ -357,7 +358,7 @@
             // Gender
             // 
             this.Gender.AutoSize = true;
-            this.Gender.Location = new System.Drawing.Point(54, 16);
+            this.Gender.Location = new System.Drawing.Point(8, 16);
             this.Gender.Name = "Gender";
             this.Gender.Size = new System.Drawing.Size(30, 13);
             this.Gender.TabIndex = 24;
@@ -369,7 +370,7 @@
             this.groupBox12.Controls.Add(this.RItem2);
             this.groupBox12.Location = new System.Drawing.Point(6, 172);
             this.groupBox12.Name = "groupBox12";
-            this.groupBox12.Size = new System.Drawing.Size(157, 41);
+            this.groupBox12.Size = new System.Drawing.Size(184, 41);
             this.groupBox12.TabIndex = 30;
             this.groupBox12.TabStop = false;
             this.groupBox12.Text = "Dropped Items";
@@ -386,7 +387,7 @@
             // RItem2
             // 
             this.RItem2.AutoSize = true;
-            this.RItem2.Location = new System.Drawing.Point(91, 16);
+            this.RItem2.Location = new System.Drawing.Point(95, 16);
             this.RItem2.Name = "RItem2";
             this.RItem2.Size = new System.Drawing.Size(13, 13);
             this.RItem2.TabIndex = 20;
@@ -452,12 +453,12 @@
             // 
             // groupBox15
             // 
-            this.groupBox15.Controls.Add(this.label54);
-            this.groupBox15.Controls.Add(this.label55);
-            this.groupBox15.Controls.Add(this.label56);
-            this.groupBox15.Controls.Add(this.label57);
-            this.groupBox15.Controls.Add(this.label58);
-            this.groupBox15.Controls.Add(this.label59);
+            this.groupBox15.Controls.Add(this.HPEV);
+            this.groupBox15.Controls.Add(this.DefenseEV);
+            this.groupBox15.Controls.Add(this.SpeedEV);
+            this.groupBox15.Controls.Add(this.SpAttackEV);
+            this.groupBox15.Controls.Add(this.SpDefenseEV);
+            this.groupBox15.Controls.Add(this.AttackEV);
             this.groupBox15.Location = new System.Drawing.Point(170, 20);
             this.groupBox15.Name = "groupBox15";
             this.groupBox15.Size = new System.Drawing.Size(154, 100);
@@ -465,59 +466,59 @@
             this.groupBox15.TabStop = false;
             this.groupBox15.Text = "EVs";
             // 
-            // label54
+            // HPEV
             // 
-            this.label54.AutoSize = true;
-            this.label54.Location = new System.Drawing.Point(6, 16);
-            this.label54.Name = "label54";
-            this.label54.Size = new System.Drawing.Size(22, 13);
-            this.label54.TabIndex = 19;
-            this.label54.Text = "HP";
+            this.HPEV.AutoSize = true;
+            this.HPEV.Location = new System.Drawing.Point(6, 16);
+            this.HPEV.Name = "HPEV";
+            this.HPEV.Size = new System.Drawing.Size(22, 13);
+            this.HPEV.TabIndex = 19;
+            this.HPEV.Text = "HP";
             // 
-            // label55
+            // DefenseEV
             // 
-            this.label55.AutoSize = true;
-            this.label55.Location = new System.Drawing.Point(6, 42);
-            this.label55.Name = "label55";
-            this.label55.Size = new System.Drawing.Size(28, 13);
-            this.label55.TabIndex = 20;
-            this.label55.Text = "DEF";
+            this.DefenseEV.AutoSize = true;
+            this.DefenseEV.Location = new System.Drawing.Point(6, 42);
+            this.DefenseEV.Name = "DefenseEV";
+            this.DefenseEV.Size = new System.Drawing.Size(28, 13);
+            this.DefenseEV.TabIndex = 20;
+            this.DefenseEV.Text = "DEF";
             // 
-            // label56
+            // SpeedEV
             // 
-            this.label56.AutoSize = true;
-            this.label56.Location = new System.Drawing.Point(78, 66);
-            this.label56.Name = "label56";
-            this.label56.Size = new System.Drawing.Size(29, 13);
-            this.label56.TabIndex = 24;
-            this.label56.Text = "SPD";
+            this.SpeedEV.AutoSize = true;
+            this.SpeedEV.Location = new System.Drawing.Point(78, 66);
+            this.SpeedEV.Name = "SpeedEV";
+            this.SpeedEV.Size = new System.Drawing.Size(29, 13);
+            this.SpeedEV.TabIndex = 24;
+            this.SpeedEV.Text = "SPD";
             // 
-            // label57
+            // SpAttackEV
             // 
-            this.label57.AutoSize = true;
-            this.label57.Location = new System.Drawing.Point(6, 67);
-            this.label57.Name = "label57";
-            this.label57.Size = new System.Drawing.Size(38, 13);
-            this.label57.TabIndex = 21;
-            this.label57.Text = "S.ATK";
+            this.SpAttackEV.AutoSize = true;
+            this.SpAttackEV.Location = new System.Drawing.Point(6, 67);
+            this.SpAttackEV.Name = "SpAttackEV";
+            this.SpAttackEV.Size = new System.Drawing.Size(38, 13);
+            this.SpAttackEV.TabIndex = 21;
+            this.SpAttackEV.Text = "S.ATK";
             // 
-            // label58
+            // SpDefenseEV
             // 
-            this.label58.AutoSize = true;
-            this.label58.Location = new System.Drawing.Point(79, 42);
-            this.label58.Name = "label58";
-            this.label58.Size = new System.Drawing.Size(38, 13);
-            this.label58.TabIndex = 23;
-            this.label58.Text = "S.DEF";
+            this.SpDefenseEV.AutoSize = true;
+            this.SpDefenseEV.Location = new System.Drawing.Point(79, 42);
+            this.SpDefenseEV.Name = "SpDefenseEV";
+            this.SpDefenseEV.Size = new System.Drawing.Size(38, 13);
+            this.SpDefenseEV.TabIndex = 23;
+            this.SpDefenseEV.Text = "S.DEF";
             // 
-            // label59
+            // AttackEV
             // 
-            this.label59.AutoSize = true;
-            this.label59.Location = new System.Drawing.Point(80, 16);
-            this.label59.Name = "label59";
-            this.label59.Size = new System.Drawing.Size(28, 13);
-            this.label59.TabIndex = 22;
-            this.label59.Text = "ATK";
+            this.AttackEV.AutoSize = true;
+            this.AttackEV.Location = new System.Drawing.Point(80, 16);
+            this.AttackEV.Name = "AttackEV";
+            this.AttackEV.Size = new System.Drawing.Size(28, 13);
+            this.AttackEV.TabIndex = 22;
+            this.AttackEV.Text = "ATK";
             // 
             // groupBox16
             // 
@@ -815,9 +816,9 @@
             // groupBox8
             // 
             this.groupBox8.Controls.Add(this.IGender);
-            this.groupBox8.Location = new System.Drawing.Point(170, 172);
+            this.groupBox8.Location = new System.Drawing.Point(196, 172);
             this.groupBox8.Name = "groupBox8";
-            this.groupBox8.Size = new System.Drawing.Size(154, 41);
+            this.groupBox8.Size = new System.Drawing.Size(128, 41);
             this.groupBox8.TabIndex = 31;
             this.groupBox8.TabStop = false;
             this.groupBox8.Text = "Gender Rate";
@@ -825,7 +826,7 @@
             // IGender
             // 
             this.IGender.AutoSize = true;
-            this.IGender.Location = new System.Drawing.Point(54, 16);
+            this.IGender.Location = new System.Drawing.Point(8, 16);
             this.IGender.Name = "IGender";
             this.IGender.Size = new System.Drawing.Size(30, 13);
             this.IGender.TabIndex = 24;
@@ -837,7 +838,7 @@
             this.groupBox7.Controls.Add(this.ITem2);
             this.groupBox7.Location = new System.Drawing.Point(6, 172);
             this.groupBox7.Name = "groupBox7";
-            this.groupBox7.Size = new System.Drawing.Size(157, 41);
+            this.groupBox7.Size = new System.Drawing.Size(184, 41);
             this.groupBox7.TabIndex = 30;
             this.groupBox7.TabStop = false;
             this.groupBox7.Text = "Dropped Items";
@@ -854,7 +855,7 @@
             // ITem2
             // 
             this.ITem2.AutoSize = true;
-            this.ITem2.Location = new System.Drawing.Point(92, 16);
+            this.ITem2.Location = new System.Drawing.Point(95, 16);
             this.ITem2.Name = "ITem2";
             this.ITem2.Size = new System.Drawing.Size(13, 13);
             this.ITem2.TabIndex = 22;
@@ -920,12 +921,12 @@
             // 
             // groupBox4
             // 
-            this.groupBox4.Controls.Add(this.label17);
-            this.groupBox4.Controls.Add(this.label18);
-            this.groupBox4.Controls.Add(this.label27);
-            this.groupBox4.Controls.Add(this.label24);
-            this.groupBox4.Controls.Add(this.label26);
-            this.groupBox4.Controls.Add(this.label25);
+            this.groupBox4.Controls.Add(this.IHPEV);
+            this.groupBox4.Controls.Add(this.IDefenseEV);
+            this.groupBox4.Controls.Add(this.ISpeedEV);
+            this.groupBox4.Controls.Add(this.ISpAttackEV);
+            this.groupBox4.Controls.Add(this.ISpDefenseEV);
+            this.groupBox4.Controls.Add(this.IAttackEV);
             this.groupBox4.Location = new System.Drawing.Point(170, 20);
             this.groupBox4.Name = "groupBox4";
             this.groupBox4.Size = new System.Drawing.Size(154, 100);
@@ -933,59 +934,59 @@
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "EVs";
             // 
-            // label17
+            // IHPEV
             // 
-            this.label17.AutoSize = true;
-            this.label17.Location = new System.Drawing.Point(6, 16);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(22, 13);
-            this.label17.TabIndex = 19;
-            this.label17.Text = "HP";
+            this.IHPEV.AutoSize = true;
+            this.IHPEV.Location = new System.Drawing.Point(6, 16);
+            this.IHPEV.Name = "IHPEV";
+            this.IHPEV.Size = new System.Drawing.Size(22, 13);
+            this.IHPEV.TabIndex = 19;
+            this.IHPEV.Text = "HP";
             // 
-            // label18
+            // IDefenseEV
             // 
-            this.label18.AutoSize = true;
-            this.label18.Location = new System.Drawing.Point(6, 42);
-            this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(28, 13);
-            this.label18.TabIndex = 20;
-            this.label18.Text = "DEF";
+            this.IDefenseEV.AutoSize = true;
+            this.IDefenseEV.Location = new System.Drawing.Point(6, 42);
+            this.IDefenseEV.Name = "IDefenseEV";
+            this.IDefenseEV.Size = new System.Drawing.Size(28, 13);
+            this.IDefenseEV.TabIndex = 20;
+            this.IDefenseEV.Text = "DEF";
             // 
-            // label27
+            // ISpeedEV
             // 
-            this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(78, 66);
-            this.label27.Name = "label27";
-            this.label27.Size = new System.Drawing.Size(29, 13);
-            this.label27.TabIndex = 24;
-            this.label27.Text = "SPD";
+            this.ISpeedEV.AutoSize = true;
+            this.ISpeedEV.Location = new System.Drawing.Point(78, 66);
+            this.ISpeedEV.Name = "ISpeedEV";
+            this.ISpeedEV.Size = new System.Drawing.Size(29, 13);
+            this.ISpeedEV.TabIndex = 24;
+            this.ISpeedEV.Text = "SPD";
             // 
-            // label24
+            // ISpAttackEV
             // 
-            this.label24.AutoSize = true;
-            this.label24.Location = new System.Drawing.Point(6, 67);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(38, 13);
-            this.label24.TabIndex = 21;
-            this.label24.Text = "S.ATK";
+            this.ISpAttackEV.AutoSize = true;
+            this.ISpAttackEV.Location = new System.Drawing.Point(6, 67);
+            this.ISpAttackEV.Name = "ISpAttackEV";
+            this.ISpAttackEV.Size = new System.Drawing.Size(38, 13);
+            this.ISpAttackEV.TabIndex = 21;
+            this.ISpAttackEV.Text = "S.ATK";
             // 
-            // label26
+            // ISpDefenseEV
             // 
-            this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(79, 42);
-            this.label26.Name = "label26";
-            this.label26.Size = new System.Drawing.Size(38, 13);
-            this.label26.TabIndex = 23;
-            this.label26.Text = "S.DEF";
+            this.ISpDefenseEV.AutoSize = true;
+            this.ISpDefenseEV.Location = new System.Drawing.Point(79, 42);
+            this.ISpDefenseEV.Name = "ISpDefenseEV";
+            this.ISpDefenseEV.Size = new System.Drawing.Size(38, 13);
+            this.ISpDefenseEV.TabIndex = 23;
+            this.ISpDefenseEV.Text = "S.DEF";
             // 
-            // label25
+            // IAttackEV
             // 
-            this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(80, 16);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(28, 13);
-            this.label25.TabIndex = 22;
-            this.label25.Text = "ATK";
+            this.IAttackEV.AutoSize = true;
+            this.IAttackEV.Location = new System.Drawing.Point(80, 16);
+            this.IAttackEV.Name = "IAttackEV";
+            this.IAttackEV.Size = new System.Drawing.Size(28, 13);
+            this.IAttackEV.TabIndex = 22;
+            this.IAttackEV.Text = "ATK";
             // 
             // groupBox3
             // 
@@ -1063,7 +1064,7 @@
             this.toolStripMenuItem2});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(810, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(811, 24);
             this.menuStrip1.TabIndex = 35;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -1109,11 +1110,20 @@
             this.toolStripMenuItem6.Size = new System.Drawing.Size(120, 22);
             this.toolStripMenuItem6.Text = "TRF File?";
             // 
+            // ItemBox
+            // 
+            this.ItemBox.FormattingEnabled = true;
+            this.ItemBox.Location = new System.Drawing.Point(853, 116);
+            this.ItemBox.Name = "ItemBox";
+            this.ItemBox.Size = new System.Drawing.Size(121, 21);
+            this.ItemBox.TabIndex = 41;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(810, 428);
+            this.ClientSize = new System.Drawing.Size(811, 428);
+            this.Controls.Add(this.ItemBox);
             this.Controls.Add(this.Next);
             this.Controls.Add(this.label66);
             this.Controls.Add(this.groupBox2);
@@ -1191,12 +1201,12 @@
         private System.Windows.Forms.Label IDef;
         private System.Windows.Forms.Label IHp;
         private System.Windows.Forms.GroupBox groupBox3;
-        private System.Windows.Forms.Label label25;
-        private System.Windows.Forms.Label label26;
-        private System.Windows.Forms.Label label24;
-        private System.Windows.Forms.Label label27;
-        private System.Windows.Forms.Label label18;
-        private System.Windows.Forms.Label label17;
+        private System.Windows.Forms.Label IAttackEV;
+        private System.Windows.Forms.Label ISpDefenseEV;
+        private System.Windows.Forms.Label ISpAttackEV;
+        private System.Windows.Forms.Label ISpeedEV;
+        private System.Windows.Forms.Label IDefenseEV;
+        private System.Windows.Forms.Label IHPEV;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.Label IType2;
         private System.Windows.Forms.Label IType1;
@@ -1237,12 +1247,12 @@
         private System.Windows.Forms.Label Def;
         private System.Windows.Forms.Label Hp;
         private System.Windows.Forms.GroupBox groupBox16;
-        private System.Windows.Forms.Label label59;
-        private System.Windows.Forms.Label label58;
-        private System.Windows.Forms.Label label57;
-        private System.Windows.Forms.Label label56;
-        private System.Windows.Forms.Label label55;
-        private System.Windows.Forms.Label label54;
+        private System.Windows.Forms.Label AttackEV;
+        private System.Windows.Forms.Label SpDefenseEV;
+        private System.Windows.Forms.Label SpAttackEV;
+        private System.Windows.Forms.Label SpeedEV;
+        private System.Windows.Forms.Label DefenseEV;
+        private System.Windows.Forms.Label HPEV;
         private System.Windows.Forms.GroupBox groupBox15;
         private System.Windows.Forms.Label Type2;
         private System.Windows.Forms.Label Type1;
@@ -1270,6 +1280,7 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.Label label66;
         private System.Windows.Forms.Button Next;
+        private System.Windows.Forms.ComboBox ItemBox;
     }
 }
 
